@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello</title>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    <script src="component.js"> </script>
+</head>
+<body>
+    <a-scene scenelistener>
+
+      <a-assets>
+        <img id="sky" src="assets/sky_night.jpg">
+        <a-asset-item id="showroom" src="assets/showroom/scene.gltf"></a-asset-item>
+      </a-assets>
+
+        <a-sky material="src:assets/sky_night.jpeg; repeat: 5 5"></a-sky>
+        <a-entity gltf-model="#showroom" position="0 0.1 0" rotation="0 45 0"></a-entity>
+        <a-entity id="cam-desktop" position="43 1.8 -22" camera look-controls wasd-controls mouse-cursor></a-entity>
+        <a-entity id="cameraRig" position="43 1.8 -22"></a-entity>
+
+    </a-scene>
+</body>
+</html>
